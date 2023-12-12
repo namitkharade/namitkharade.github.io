@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Vue Tailwind Portfolio
 
 Fancy and minimal portfolio made on VUE JS and Tailwind CSS.
@@ -69,3 +70,6 @@ I'm a full stack developer...
 ## Demo
 
 Link: https://saileshrijal.github.io/
+=======
+# namitkharade.github.io
+>>>>>>> 9ac13201ebe80bbe07e324b222f714c43f7916a4
