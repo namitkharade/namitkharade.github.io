@@ -14,6 +14,7 @@
         </div>
     </div>
 </template>
+
 <script setup>
 import { ref, onMounted } from 'vue';
 import Loader from '../components/Loader.vue';

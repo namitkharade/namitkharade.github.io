@@ -3,7 +3,7 @@
       <img
         src="../assets/imgs/profile.jpg"
         alt="Profile"
-        class="w-[250px] h-[250px] sm:w-[270px] sm:h-[270px] mx-auto rounded-full shadow-md"
+        class="w-[230px] h-[230px] sm:w-[250px] sm:h-[250px] mx-auto rounded-full shadow-md"
       />
       <h1 class="mt-8 mb-4 text-5xl sm:text-6xl uppercase font-bold text-indigo-600 dark:text-red-500">
       Namit Kharade

@@ -5,9 +5,12 @@
                 <RouterLink to="/"
                     class="m-1 px-4 py-2 border-2 border-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:transition-all hover:duration-300 dark:text-white ">
                     Home</RouterLink>
-                <RouterLink to="/about"
+                <RouterLink to="/education"
                     class="m-1 px-4 py-2 border-2 border-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:transition-all hover:duration-300 dark:text-white">
-                    About</RouterLink>
+                    Education</RouterLink>
+                <RouterLink to="/work"
+                    class="m-1 px-4 py-2 border-2 border-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:transition-all hover:duration-300 dark:text-white ">
+                    Work</RouterLink>
                 <RouterLink to="/project"
                     class="m-1 px-4 py-2 border-2 border-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:transition-all hover:duration-300 dark:text-white">
                     Project</RouterLink>

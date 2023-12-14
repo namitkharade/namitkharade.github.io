@@ -13,7 +13,7 @@ Fancy and minimal portfolio made on VUE JS and Tailwind CSS.
 Clone the project
 
 ```bash
-  git clone https://github.com/saileshrijal/vue-tailwind-portfolio
+  git clone https://github.com/namitkharade/namitkharade.github.io
 ```
 
 Go to the project directory
