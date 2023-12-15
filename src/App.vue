@@ -1,7 +1,7 @@
 <template>
   <div :class="isDarkMode ? 'dark' : ''">
     <div
-      class="bg-blue-100 min-h-screen sm:p-10 p-5 flex flex-col justify-center dark:bg-[#0F172A] duration-500 transition-all ease-in-out">
+      class="bg-[#e4eaeb] min-h-screen sm:p-10 p-5 flex flex-col justify-center dark:bg-[#0F172A] duration-500 transition-all ease-in-out">
       <button @click="toggleDarkMode" class="animate-pulse">
         <ModeToggler :class="isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon'" />
       </button>

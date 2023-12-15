@@ -1,27 +1,27 @@
 <template>
     <div class="text-center">
-      <img
+      <img 
         src="../assets/imgs/profile.jpg"
         alt="Profile"
-        class="w-[230px] h-[230px] sm:w-[250px] sm:h-[250px] mx-auto rounded-full shadow-md"
+        class="w-[210px] h-[210px] sm:w-[250px] sm:h-[250px] mt-20 mx-auto rounded-full shadow-md"
       />
-      <h1 class="mt-8 mb-4 text-5xl sm:text-6xl uppercase font-bold text-indigo-600 dark:text-red-500">
+      <h1 class="mt-8 mb-4 text-5xl sm:text-6xl uppercase font-bold text-indigo-600 dark:text-[#CD0045]">
       Namit Kharade
     </h1>
-      <hr class="my-8 border-t-2 border-purple-600 w-32 mx-auto" />
+      <hr class="my-8 border-t-2 border-black w-32 mx-auto dark:border-white" />
       <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
       Determined and self-driven software developer with 2 years of experience building optimized and reliable solutions.<br>
       Currently, pursuing Master of Science in Data and Knowledge Engineering at Otto-von Guericke University Magdeburg.<br>
     </p>
 
-      <div class="my-8 border-t-2 border-purple-600 w-32 mx-auto"></div>
+      <div class="my-8 border-t-2 border-black w-32 mx-auto dark:border-white"></div>
 
       <!-- Skills Section -->
       <div class="mt-8">
         <h2 class="text-3xl mb-4 font-bold text-purple-600 dark:text-white">
           Skills
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div v-for="category in skillCategories" :key="category.name">
             <h3 class="text-xl font-bold mb-2 text-purple-600 dark:text-white">
               {{ category.name }}
@@ -60,17 +60,32 @@
       ],
     },
     {
-      name: 'Backend',
+      name: 'Databases',
       skills: [
-        { name: 'Node.js', svg: { xmlns: 'http://www.w3.org/2000/svg', height: 32, width: 24, viewBox: '0 0 384 512', path: 'M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z' }, color: '#27ae60' },
-        // Add more backend skills here
+        { name: 'SQL', svg: { xmlns: 'http://www.w3.org/2000/svg', height: 32, width: 24, viewBox: '0 0 384 512', path: 'M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z' }, color: '#27ae60' },
+        { name: 'MongoDB', svg: { xmlns: 'http://www.w3.org/2000/svg', height: 32, width: 24, viewBox: '0 0 384 512', path: 'M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z' }, color: '#27ae60' },
+        { name: 'PostgreSQL', svg: { xmlns: 'http://www.w3.org/2000/svg', height: 32, width: 24, viewBox: '0 0 384 512', path: 'M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z' }, color: '#27ae60' },
       ],
     },
     {
-      name: 'Tools',
+      name: 'Libraries',
       skills: [
         { name: 'Git', svg: { xmlns: 'http://www.w3.org/2000/svg', height: 32, width: 24, viewBox: '0 0 384 512', path: 'M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z' }, color: '#e74c3c' },
-        // Add more tools here
+        
+      ],
+    },
+    {
+      name: 'Cloud and Editors',
+      skills: [
+        { name: 'Git', svg: { xmlns: 'http://www.w3.org/2000/svg', height: 32, width: 24, viewBox: '0 0 384 512', path: 'M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z' }, color: '#e74c3c' },
+        
+      ],
+    },
+    {
+      name: 'Other',
+      skills: [
+        { name: 'Git', svg: { xmlns: 'http://www.w3.org/2000/svg', height: 32, width: 24, viewBox: '0 0 384 512', path: 'M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z' }, color: '#e74c3c' },
+        
       ],
     },
   ];
