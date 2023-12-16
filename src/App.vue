@@ -39,8 +39,6 @@ const toggleDarkMode = () => {
     isDarkMode.value = true;
   }
 }
-
-
 </script>
 
 

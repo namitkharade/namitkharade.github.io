@@ -1,11 +1,11 @@
 <template>
-    <div class="fixed top-10">
+    <div class="fixed top-10 bg-[#e4eaeb] dark:bg-[#0F172A] bg-[#e4eaeb] dark:bg-[#0F172A] duration-500 transition-all ease-in-out">
       <ul class="flex justify-center">
         <li>
-          <RouterLink to="/" class="nav-link">Home</RouterLink>
-          <RouterLink to="/education" class="nav-link">Education</RouterLink>
-         <RouterLink to="/work" class="nav-link">Work</RouterLink>
-        <RouterLink to="/project" class="nav-link">Project</RouterLink>
+          <RouterLink to="/" class="nav-link">Me 😉</RouterLink>
+         <RouterLink to="/resume" class="nav-link">Resume 📄</RouterLink>
+        <RouterLink to="/project" class="nav-link">Projects</RouterLink>
+        <RouterLink to="/contact" class="nav-link">Contact</RouterLink>
         </li>
       </ul>
     </div>
