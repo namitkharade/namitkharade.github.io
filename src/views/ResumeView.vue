@@ -12,7 +12,7 @@
         </p>
 
         <div class="mt-8">
-          <a href="../src/assets/resume.pdf" target="_blank" class="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg mr-4"><i class="fa fa-download fa-lg fa-fw"></i> Download PDF</a>
+          <a href="../assets/resume.pdf" target="_blank" class="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg mr-4"><i class="fa fa-download fa-lg fa-fw"></i> Download PDF</a>
         </div>
       </div>
 
@@ -23,64 +23,111 @@
 
     <div class="clear-both"></div>
 
-    <div class="max-w-prose mt-8">
+  <div class="max-w-prose mt-8 dark:text-white">
   <h2 class="text-2xl font-bold mt-8">EDUCATION</h2>
-  <div class="mt-6">
+  
+  <div class="mt-6 ml-8">
+    <h3 class="text-xl font-bold flex items-center"> Masters in Data and Knowledge Engineering </h3>
+    <h3 class="text-xl font-bold flex items-center"> 
+      <img src="../assets/imgs/OVGU.png" alt="aiio" class="mr-2 h-6 w-6">Otto-von-Guericke University
+    </h3>
+    <h4 class="text-lg font-italic">October 2022 - Present</h4>
+  </div>
+
+  <div class="mt-6 ml-8">
+    <h3 class="text-xl font-bold flex items-center">Bachelors in Computer Engineering </h3>
+    <h3 class="text-xl font-bold flex items-center"> 
+      <img src="../assets/imgs/Savitribai_Phule_Pune_University_Logo.png" alt="aiio" class="mr-2 h-6 w-6">Savitribai Phule Pune University
+    </h3>
+    <h4 class="text-lg font-italic">May 2017 - July 2021</h4>
+  </div>
+
+
+  <h2 class="text-2xl font-bold mt-8">WORK EXPERIENCE</h2>
+  <div class="mt-6 ml-8">
     <h3 class="text-xl font-bold flex items-center"> 
       <img src="../assets/imgs/aiio-gmbh.png" alt="aiio" class="mr-2 h-6 w-6">aiio GmbH - Working student
     </h3>
     <h4 class="text-lg font-italic">March 2023 - July 2023</h4>
-
-    <div>It's classified so I can't speak about it.</div>
-
   </div>
 
+  <div class="mt-6 ml-8">
+    <h3 class="text-xl font-bold flex items-center"> 
+      <img src="../assets/imgs/accenture.png" alt="aiio" class="mr-2 h-6 w-6">Accenture Solutions - Associate Software Engineer
+    </h3>
+    <h4 class="text-lg font-italic">March 2023 - July 2023</h4>
+  </div>
 
-      <h2 class="text-2xl font-bold mt-8">WORK EXPERIENCE</h2>
-      <div class="mt-6">
-        <h3 class="text-xl font-bold">Operation Classified - Delta Force</h3>
-        <h4 class="text-lg font-italic">2018-2019</h4>
+  <div class="mt-6 ml-8">
+    <h3 class="text-xl font-bold flex items-center"> 
+      <img src="../assets/imgs/aiadv.png" alt="aiio" class="mr-2 h-6 w-6">AiAdventures - ML Engineer (Intern)
+    </h3>
+    <h4 class="text-lg font-italic">March 2023 - July 2023</h4>
+  </div>
+      
+  <h2 class="text-2xl font-bold mt-8">SKILLS</h2>
 
-        <div>It's classified so I can't speak about it.</div>
+  <div class="skill-set mt-4 ml-8">
+  <h3 class="text-xl font-bold">Programming Languages</h3>
+  <div class="flex items-center">
+    <span class="mr-2">Python, C, C++, TypeScript, HTML, CSS, JavaScript</span>
+  </div>
+</div>
 
-        <div class="tech-stack italic">xyz</div>
-      </div>
+<div class="skill-set mt-4 ml-8">
+  <h3 class="text-xl font-bold">Libraries & Frameworks</h3>
+  <div class="flex items-center">
+    <span class="mr-2">Scikit-learn, TensorFlow, PyTorch, Keras, OpenCV, DialogFlow</span>
+  </div>
+</div>
 
-      <!-- Repeat the above structure for other work experiences -->
+<div class="skill-set mt-4 ml-8">
+  <h3 class="text-xl font-bold">Databases</h3>
+  <div class="flex items-center">
+    <span class="mr-2">MySQL, SQL Server, MongoDB, PostgreSQL, NoSQL</span>
+  </div>
+</div>
 
-      <h2 class="text-2xl font-bold mt-8">SKILLS</h2>
+<div class="skill-set mt-4 ml-8">
+  <h3 class="text-xl font-bold">Operating Systems</h3>
+  <div class="flex items-center">
+    <span class="mr-2">Microsoft Windows, Linux (Ubuntu)</span>
+  </div>
+</div>
 
-      <div class="skill-set mt-4">
-        <h3 class="text-xl font-bold">Lethal</h3>
-        <!-- Use appropriate Tailwind CSS classes for SkillRate component -->
-      </div>
+<div class="skill-set mt-4 ml-8">
+  <h3 class="text-xl font-bold">Cloud & Infrastructures</h3>
+  <div class="flex items-center">
+    <span class="mr-2">Google Cloud Platform (GCP), AWS, dbt, Terraform, Amazon SageMaker, Apache Airflow, Docker, Git, Kubeflow</span>
+  </div>
+</div>
 
-      <div class="skill-set mt-4">
-        <h3 class="text-xl font-bold">Non-lethal</h3>
-        <!-- Use appropriate Tailwind CSS classes for SkillRate component -->
-      </div>
+<div class="skill-set mt-4 ml-8">
+  <h3 class="text-xl font-bold">IDEs</h3>
+  <div class="flex items-center">
+    <span class="mr-2">VSCode, Jupyter Notebook</span>
+  </div>
+</div>
+
+<div class="skill-set mt-4 ml-8">
+  <h3 class="text-xl font-bold">Visualization & Analytical Tools</h3>
+  <div class="flex items-center">
+    <span class="mr-2">Matplotlib, Plotly, Seaborn, Pandas, Microsoft Excel, LookerStudio, Power BI</span>
+  </div>
+</div>
     </div>
 
-    <h2 class="text-2xl font-bold mt-8">Education</h2>
+    <h2 class="text-2xl font-bold mt-8 dark:text-white">Besides...</h2>
 
-    <!-- Repeat the above structure for education details -->
-
-    <h2 class="text-2xl font-bold mt-8">Languages</h2>
-
-    <!-- Repeat the above structure for language details -->
-
-    <h2 class="text-2xl font-bold mt-8">Besides...</h2>
-
-    <div class="mt-4">
+    <div class="mt-4 ml-8 dark:text-white">
       <h3 class="text-xl font-bold">I ❤️ Cars</h3>
-      <!-- Repeat the above structure for other interests -->
+      <h3 class="text-xl font-bold">I 💙 Cats</h3>
+      <h3 class="text-xl font-bold">I 💚 Trips</h3>
+      <h3 class="text-xl font-bold">I 💛 Swimming</h3>
+      <h3 class="text-xl font-bold">I 💜 Sports</h3>
     </div>
   </div>
 </template>
 
 <script>
 </script>
-
-<style scoped>
-  /* Your existing scoped styles here */
-</style>

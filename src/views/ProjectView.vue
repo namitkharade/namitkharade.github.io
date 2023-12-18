@@ -1,13 +1,13 @@
 <template>
-    <p class="text-center mb-3 dark:text-blue-300">Projects from <font-awesome-icon icon="fa-brands fa-github" />
+    <p class="text-4xl font-bold mb-20 ml-20 mt-20 dark:text-blue-300">Projects from <font-awesome-icon icon="fa-brands fa-github" />
     </p>
-    <div class="max-h-[50vh] overflow-auto sm:w-4/12 mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto">
         <Loader v-if="loading" />
         <div v-if="error" class="text-red-500 text-center">{{ error }}</div>
-        <div v-for="(project, index) in projects" :key="project.id">
-            <a :href="project.html_url" target="_bl">
-                <div class="bg-blue-300 mb-4 p-2 rounded-md shadow-md">
-                    <h2 class="font-bold text-xl">{{ ++index }} {{ project.name }}</h2>
+        <div v-for="(project) in projects" :key="project.id">
+            <a :href="project.html_url" target="_blank">
+                <div class="bg-blue-300 p-10 rounded-md shadow-md">
+                    <h2 class="font-bold text-xl"> {{ project.name }}</h2>
                     <p>{{ project.description }}</p>
                 </div>
             </a>
