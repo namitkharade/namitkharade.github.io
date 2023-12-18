@@ -19,7 +19,7 @@ Clone the project
 Navigate to the Project Directory
 
 ```bash
-  cd vue-tailwind-portfolio
+  cd namitkharade.github.io
 ```
 
 Install dependencies
