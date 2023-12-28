@@ -1,7 +1,7 @@
 <template>
     <div class="text-center">
       <img 
-        src="../assets/imgs/memoji.png"
+        src="../assets/imgs/Animoji_1.gif"
         alt="Profile"
         class="w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] mt-20 mx-auto"
       />

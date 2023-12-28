@@ -12,7 +12,7 @@
         </p>
 
         <div class="mt-8">
-          <a href="../assets/resume.pdf" target="_blank" class="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg mr-4"><i class="fa fa-download fa-lg fa-fw"></i> Download PDF</a>
+          <a href="https://drive.google.com/file/d/1EXH_Z9aqNh3rQXSViLv4go_6SIQv1xDy/view?usp=drive_link" target="_blank" class="inline-block bg-blue-500 text-white py-2 px-4 rounded-lg mr-4"><i class="fa fa-download fa-lg fa-fw"></i> Download PDF</a>
         </div>
       </div>
 
@@ -55,14 +55,14 @@
     <h3 class="text-xl font-bold flex items-center"> 
       <img src="../assets/imgs/accenture.png" alt="aiio" class="mr-2 h-6 w-6">Accenture Solutions - Associate Software Engineer
     </h3>
-    <h4 class="text-lg font-italic">March 2023 - July 2023</h4>
+    <h4 class="text-lg font-italic">August 2021 - August 2022</h4>
   </div>
 
   <div class="mt-6 ml-8">
     <h3 class="text-xl font-bold flex items-center"> 
       <img src="../assets/imgs/aiadv.png" alt="aiio" class="mr-2 h-6 w-6">AiAdventures - ML Engineer (Intern)
     </h3>
-    <h4 class="text-lg font-italic">March 2023 - July 2023</h4>
+    <h4 class="text-lg font-italic">December 2020 - May 2021</h4>
   </div>
       
   <h2 class="text-2xl font-bold mt-8">SKILLS</h2>
@@ -98,7 +98,7 @@
 <div class="skill-set mt-4 ml-8">
   <h3 class="text-xl font-bold">Cloud & Infrastructures</h3>
   <div class="flex items-center">
-    <span class="mr-2">Google Cloud Platform (GCP), AWS, dbt, Terraform, Amazon SageMaker, Apache Airflow, Docker, Git, Kubeflow</span>
+    <span class="mr-2">Google Cloud Platform (GCP), AWS, dbt, Apache Airflow, Docker, Git, Kubeflow</span>
   </div>
 </div>
 

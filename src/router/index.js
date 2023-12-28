@@ -8,22 +8,46 @@ const routes = [
     {
         path: '/',
         name: 'Home',
-        component: HomeView
+        component: HomeView,
+        meta: {
+            title: 'Namit Kharade',
+            metaTags: [{
+                name: 'Home page',
+                content: 'Home page describing a short about me '}]
+          }
     },
     {
         path: '/resume',
         name: 'Resume',
-        component: ResumeView
+        component: ResumeView,
+        meta: {
+            title: 'Namit Kharade Resume',
+            metaTags: [{
+                name: 'Resume page',
+                content: 'Resume page with detailed description about me'}]
+          }
     },
     {
         path: '/project',
         name: 'Project',
-        component: ProjectView
+        component: ProjectView,
+        meta: {
+            title: 'Namit Kharade Project List',
+            metaTags: [{
+                name: 'Projects page',
+                content: 'Project list showing all my Github projects'}]
+          }
     },
     {
         path: '/contact',
         name: 'Contact',
-        component: ContactView
+        component: ContactView,
+        meta: {
+            title: 'Namit Kharade Contact page',
+            metaTags: [{
+                name: 'Contact page',
+                content: 'Contact form and my social links'}]
+          }
     },
     {
         path : '/:catchAll(.*)',

@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import Meta from 'vue-meta';
 import './style.css'
 import App from './App.vue'
 import router from './router'
@@ -17,3 +18,5 @@ createApp(App)
 .use(router)
 .component('font-awesome-icon', FontAwesomeIcon)
 .mount('#app');
+
+Vue.use(Meta);
