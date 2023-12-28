@@ -1,12 +1,12 @@
-# Vue Tailwind Portfolio
+# My Portfolio
 
-Fancy and minimal portfolio made on VUE JS and Tailwind CSS.
+A sleek and minimalist portfolio crafted using Vue.js and Tailwind CSS.
 
 ## Features
 
 - Light/dark mode toggle
-- Fetched Projects from github repositories
-- Responsive
+- GitHub Projects Integration
+- Responsive Design
 
 ## Run Locally
 
@@ -16,10 +16,10 @@ Clone the project
   git clone https://github.com/namitkharade/namitkharade.github.io
 ```
 
-Go to the project directory
+Navigate to the Project Directory
 
 ```bash
-  cd vue-tailwind-portfolio
+  cd namitkharade.github.io
 ```
 
 Install dependencies
@@ -34,7 +34,7 @@ Start the server
   npm run dev
 ```
 
-Build the project
+Build the Project (Optional):
 
 ```bash
   npm run build
