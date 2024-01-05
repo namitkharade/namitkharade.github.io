@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div class="clear-both"></div>
+    <div class="clear-both"></div> 
 
   <div class="max-w-prose mt-8 dark:text-white">
   <h2 class="text-2xl font-bold mt-8">EDUCATION</h2>

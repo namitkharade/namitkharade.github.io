@@ -14,7 +14,7 @@
   <style scoped>
   .nav-link {
     margin: 2px;
-    padding: 4px 16px;
+    padding: 4px 14px;
     border: 2px solid #3490dc;
     border-radius: 10px;
     transition: all 300ms;

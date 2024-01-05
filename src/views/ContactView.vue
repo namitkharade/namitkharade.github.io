@@ -25,5 +25,6 @@
       <button type="submit" class="bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded">Send message</button>
     </form>
   </div>
+  
 </template>
 
