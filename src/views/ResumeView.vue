@@ -40,10 +40,10 @@
             <div class="flex flex-wrap justify-between items-start mb-4">
               <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                  <img src="../assets/imgs/aiadv.png" alt="AIME GmbH" class="w-12 h-12 object-contain rounded-lg bg-white p-1" />
+                  <img src="../assets/imgs/aime.png" alt="AIME GmbH" class="w-12 h-12 object-contain rounded-lg bg-white p-1" />
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">AI Engineer (part-time)</h3>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">AI Engineer</h3>
                   <a href="https://aime.info" target="_blank" class="text-lg font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 inline-flex items-center">
                     AIME GmbH
                     <font-awesome-icon icon="fa-solid fa-external-link-alt" class="ml-1 text-sm" />
@@ -72,9 +72,7 @@
             <div class="flex flex-wrap justify-between items-start mb-4">
               <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                  <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                    ai
-                  </div>
+                  <img src="../assets/imgs/aicoustics-gmbh.png" alt="ai-coustics GmbH" class="w-12 h-12 object-contain rounded-lg bg-white p-1" />
                 </div>
                 <div>
                   <h3 class="text-xl font-bold text-gray-900 dark:text-white">Data Engineer</h3>
@@ -153,7 +151,7 @@
                 </div>
               </div>
               <div class="text-gray-600 dark:text-gray-300 text-sm font-medium mt-2 sm:mt-0">
-                August 2021 - September 2022
+                August 2021 - August 2022
               </div>
             </div>
             <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2">
@@ -165,25 +163,26 @@
           </div>
         </div>
 
-        <!-- Freelance/Projects -->
+        <!-- aiadventures -->
         <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
           <div class="absolute -left-2.5 top-0 w-6 h-6 rounded-full bg-blue-600"></div>
           <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <div class="flex flex-wrap justify-between items-start mb-4">
               <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                  <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                    F
-                  </div>
+                  <img src="../assets/imgs/aiadv.png" alt="aiadventures" class="w-12 h-12 object-contain rounded-lg bg-white p-1" />
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Freelance Developer & Researcher</h3>
-                  <h4 class="text-lg font-medium text-blue-600 dark:text-blue-400">Independent</h4>
-                  <div class="text-sm text-gray-600 dark:text-gray-400">Remote</div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">ML Engineer (Intern)</h3>
+                  <a href="https://www.aiadventures.in/" target="_blank" class="text-lg font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 inline-flex items-center">
+                    aiadventures
+                    <font-awesome-icon icon="fa-solid fa-external-link-alt" class="ml-1 text-sm" />
+                  </a>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">Pune, India</div>
                 </div>
               </div>
               <div class="text-gray-600 dark:text-gray-300 text-sm font-medium mt-2 sm:mt-0">
-                2020 - 2022
+                December 2020 - May 2021
               </div>
             </div>
             <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2">
