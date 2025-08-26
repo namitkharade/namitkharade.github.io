@@ -7,5 +7,22 @@ export default defineConfig({
   base: '/',
   server: {
     historyApiFallback: true
+  },
+  define: {
+    global: 'globalThis',
+  },
+  optimizeDeps: {
+    include: ['@emailjs/browser']
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router'],
+          fontawesome: ['@fortawesome/fontawesome-svg-core', '@fortawesome/vue-fontawesome'],
+          icons: ['@fortawesome/free-solid-svg-icons', '@fortawesome/free-brands-svg-icons']
+        }
+      }
+    }
   }
 })

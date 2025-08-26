@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import { createMetaManager } from 'vue-meta'
 import './style.css'
 import App from './App.vue'
 import router from './router'
@@ -13,12 +12,16 @@ import {
   faBook, faBriefcase, faFile,
   faLocationDot, faExternalLinkAlt, faPhone,
   faPaperPlane, faSpinner, faCheckCircle,
-  faExclamationCircle
+  faExclamationCircle, faEye, faEyeSlash,
+  faArrowRight, faBrain, faDatabase, faRobot,
+  faGlobe, faServer, faChartBar, faGamepad,
+  faComments, faMobileAlt, faTimes
 } from '@fortawesome/free-solid-svg-icons'
 
 import { 
   faFacebook, faGithub, faInstagram, 
-  faLinkedin, faTwitter 
+  faLinkedin, faTwitter, faJs, faPython,
+  faJava, faVuejs, faReact
 } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
@@ -27,13 +30,14 @@ library.add(
   faDownload, faCode, faGraduationCap, faBook, 
   faBriefcase, faFile, faLocationDot, faExternalLinkAlt,
   faPhone, faPaperPlane, faSpinner, faCheckCircle,
-  faExclamationCircle
+  faExclamationCircle, faEye, faEyeSlash, faArrowRight,
+  faBrain, faDatabase, faRobot, faGlobe, faServer,
+  faChartBar, faGamepad, faComments, faMobileAlt,
+  faTimes, faJs, faPython, faJava, faVuejs, faReact
 )
 
 const app = createApp(App);
 
-// Add meta support
 app.use(router);
-app.use(createMetaManager());
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');
