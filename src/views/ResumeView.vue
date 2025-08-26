@@ -12,7 +12,7 @@
           </p>
         </div>
         <div class="mt-6">
-          <a href="src/assets/imgs/resume.pdf" download class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md">
+          <a @click="downloadResume" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md cursor-pointer">
             <font-awesome-icon icon="fa-solid fa-download" class="mr-2" />
             Download Resume
           </a>
@@ -38,10 +38,18 @@
           <div class="absolute -left-2.5 top-0 w-6 h-6 rounded-full bg-blue-600"></div>
           <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <div class="flex flex-wrap justify-between items-start mb-4">
-              <div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white">AI Engineer (part-time)</h3>
-                <h4 class="text-lg font-medium text-blue-600 dark:text-blue-400">AIME GmbH</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400">Berlin, Germany</div>
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <img src="../assets/imgs/aiadv.png" alt="AIME GmbH" class="w-12 h-12 object-contain rounded-lg bg-white p-1" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">AI Engineer (part-time)</h3>
+                  <a href="https://aime.info" target="_blank" class="text-lg font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 inline-flex items-center">
+                    AIME GmbH
+                    <font-awesome-icon icon="fa-solid fa-external-link-alt" class="ml-1 text-sm" />
+                  </a>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">Berlin, Germany</div>
+                </div>
               </div>
               <div class="text-gray-600 dark:text-gray-300 text-sm font-medium mt-2 sm:mt-0">
                 November 2024 - Present
@@ -62,10 +70,20 @@
           <div class="absolute -left-2.5 top-0 w-6 h-6 rounded-full bg-blue-600"></div>
           <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <div class="flex flex-wrap justify-between items-start mb-4">
-              <div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Data Engineer</h3>
-                <h4 class="text-lg font-medium text-blue-600 dark:text-blue-400">ai-coustics GmbH</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400">Berlin, Germany</div>
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    ai
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Data Engineer</h3>
+                  <a href="https://ai-coustics.com" target="_blank" class="text-lg font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 inline-flex items-center">
+                    ai-coustics GmbH
+                    <font-awesome-icon icon="fa-solid fa-external-link-alt" class="ml-1 text-sm" />
+                  </a>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">Berlin, Germany</div>
+                </div>
               </div>
               <div class="text-gray-600 dark:text-gray-300 text-sm font-medium mt-2 sm:mt-0">
                 February 2024 - August 2024
@@ -87,10 +105,18 @@
           <div class="absolute -left-2.5 top-0 w-6 h-6 rounded-full bg-blue-600"></div>
           <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <div class="flex flex-wrap justify-between items-start mb-4">
-              <div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Software Engineer</h3>
-                <h4 class="text-lg font-medium text-blue-600 dark:text-blue-400">aiio GmbH</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400">Magdeburg, Germany</div>
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <img src="../assets/imgs/aiio-gmbh.png" alt="aiio GmbH" class="w-12 h-12 object-contain rounded-lg bg-white p-1" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Software Engineer</h3>
+                  <a href="https://aiio.de" target="_blank" class="text-lg font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 inline-flex items-center">
+                    aiio GmbH
+                    <font-awesome-icon icon="fa-solid fa-external-link-alt" class="ml-1 text-sm" />
+                  </a>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">Magdeburg, Germany</div>
+                </div>
               </div>
               <div class="text-gray-600 dark:text-gray-300 text-sm font-medium mt-2 sm:mt-0">
                 March 2023 - January 2024
@@ -106,10 +132,75 @@
         </div>
       </div>
 
+      <!-- Additional Experiences (Hidden by default) -->
+      <div v-show="showMoreExperience" class="space-y-10 ml-14">
+        <!-- Accenture -->
+        <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
+          <div class="absolute -left-2.5 top-0 w-6 h-6 rounded-full bg-blue-600"></div>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex flex-wrap justify-between items-start mb-4">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <img src="../assets/imgs/accenture.png" alt="Accenture" class="w-12 h-12 object-contain rounded-lg bg-white p-1" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Application Development Associate</h3>
+                  <a href="https://www.accenture.com" target="_blank" class="text-lg font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 inline-flex items-center">
+                    Accenture
+                    <font-awesome-icon icon="fa-solid fa-external-link-alt" class="ml-1 text-sm" />
+                  </a>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">Pune, India</div>
+                </div>
+              </div>
+              <div class="text-gray-600 dark:text-gray-300 text-sm font-medium mt-2 sm:mt-0">
+                August 2021 - September 2022
+              </div>
+            </div>
+            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2">
+              <li>Worked as part of an agile development team to design, develop, and maintain enterprise-level applications.</li>
+              <li>Collaborated with cross-functional teams to gather requirements and implement business solutions.</li>
+              <li>Participated in code reviews, testing, and deployment processes to ensure high-quality deliverables.</li>
+              <li>Gained experience in software development lifecycle and enterprise application architecture.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Freelance/Projects -->
+        <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
+          <div class="absolute -left-2.5 top-0 w-6 h-6 rounded-full bg-blue-600"></div>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="flex flex-wrap justify-between items-start mb-4">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    F
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">Freelance Developer & Researcher</h3>
+                  <h4 class="text-lg font-medium text-blue-600 dark:text-blue-400">Independent</h4>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">Remote</div>
+                </div>
+              </div>
+              <div class="text-gray-600 dark:text-gray-300 text-sm font-medium mt-2 sm:mt-0">
+                2020 - 2022
+              </div>
+            </div>
+            <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2">
+              <li>Developed machine learning projects including helmet violation detection and COVID-19 mask detection systems.</li>
+              <li>Published research papers in IEEE conferences on computer vision and deep learning applications.</li>
+              <li>Built web applications using modern frameworks and collaborated with clients on custom solutions.</li>
+              <li>Contributed to open-source projects and maintained personal GitHub portfolio with 20+ repositories.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <!-- View more experiences button -->
-      <div class="text-center mt-4">
-        <button class="px-6 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-300">
-          View More Experience
+      <div class="text-center mt-8">
+        <button @click="toggleExperience" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 inline-flex items-center shadow-md">
+          <font-awesome-icon :icon="showMoreExperience ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'" class="mr-2" />
+          {{ showMoreExperience ? 'Show Less Experience' : 'View More Experience' }}
         </button>
       </div>
     </section>
@@ -243,10 +334,27 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ResumeView'
-}
+<script setup>
+import { ref } from 'vue';
+
+const showMoreExperience = ref(false);
+
+const downloadResume = () => {
+  // Create a link element and trigger download
+  const link = document.createElement('a');
+  link.href = '/resume.pdf';
+  link.download = 'Namit_Kharade_Resume.pdf';
+  link.target = '_blank';
+  
+  // Append to body, click, and remove
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+const toggleExperience = () => {
+  showMoreExperience.value = !showMoreExperience.value;
+};
 </script>
 
 <style scoped>

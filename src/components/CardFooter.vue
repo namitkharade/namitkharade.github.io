@@ -22,7 +22,6 @@
                 </div>
                 <div class="text-gray-600 dark:text-gray-400 text-sm">
                     <p>© {{ new Date().getFullYear() }} Namit Kharade. All rights reserved.</p>
-                    <p class="mt-1">+49 176 37249426 · namit.b.kharade@gmail.com</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,58 @@
+{
+  "hash": "9cc2549c",
+  "configHash": "6eb10b37",
+  "lockfileHash": "a133efe8",
+  "browserHash": "2320e994",
+  "optimized": {
+    "vue": {
+      "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "b1dfb08c",
+      "needsInterop": false
+    },
+    "vue-meta": {
+      "src": "../../node_modules/vue-meta/dist/vue-meta.esm-browser.min.js",
+      "file": "vue-meta.js",
+      "fileHash": "8f74b813",
+      "needsInterop": false
+    },
+    "@fortawesome/fontawesome-svg-core": {
+      "src": "../../node_modules/@fortawesome/fontawesome-svg-core/index.mjs",
+      "file": "@fortawesome_fontawesome-svg-core.js",
+      "fileHash": "18a9f4e2",
+      "needsInterop": false
+    },
+    "@fortawesome/vue-fontawesome": {
+      "src": "../../node_modules/@fortawesome/vue-fontawesome/index.es.js",
+      "file": "@fortawesome_vue-fontawesome.js",
+      "fileHash": "8fe317da",
+      "needsInterop": false
+    },
+    "@fortawesome/free-solid-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-solid-svg-icons/index.mjs",
+      "file": "@fortawesome_free-solid-svg-icons.js",
+      "fileHash": "a0a4f8ab",
+      "needsInterop": false
+    },
+    "@fortawesome/free-brands-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
+      "file": "@fortawesome_free-brands-svg-icons.js",
+      "fileHash": "bf7214b1",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "8b03473a",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-HXTLFKSK": {
+      "file": "chunk-HXTLFKSK.js"
+    },
+    "chunk-WJ7LPANR": {
+      "file": "chunk-WJ7LPANR.js"
+    }
+  }
+}

@@ -11,7 +11,9 @@ import {
   faEnvelope, faMoon, faSun, faUserSecret, 
   faDownload, faCode, faGraduationCap, 
   faBook, faBriefcase, faFile,
-  faLocationDot, faExternalLinkAlt
+  faLocationDot, faExternalLinkAlt, faPhone,
+  faPaperPlane, faSpinner, faCheckCircle,
+  faExclamationCircle
 } from '@fortawesome/free-solid-svg-icons'
 
 import { 
@@ -23,9 +25,10 @@ library.add(
   faUserSecret, faFacebook, faLinkedin, faInstagram, 
   faGithub, faTwitter, faMoon, faSun, faEnvelope,
   faDownload, faCode, faGraduationCap, faBook, 
-  faBriefcase, faFile, faLocationDot, faExternalLinkAlt
+  faBriefcase, faFile, faLocationDot, faExternalLinkAlt,
+  faPhone, faPaperPlane, faSpinner, faCheckCircle,
+  faExclamationCircle
 )
-
 
 const app = createApp(App);
 
