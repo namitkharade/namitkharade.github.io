@@ -1,4 +1,4 @@
-const CACHE_NAME = 'namit-portfolio-v1';
+const CACHE_NAME = 'namit-portfolio-v2';
 const urlsToCache = [
   '/',
   '/manifest.json',
@@ -7,6 +7,7 @@ const urlsToCache = [
   '/src/assets/imgs/profile.jpg',
   '/src/assets/imgs/memoji.png',
   '/src/assets/imgs/Animoji_1.gif',
+  '/resume.pdf',
   '/favicon/android-chrome-192x192.png',
   '/favicon/android-chrome-512x512.png',
   '/favicon/apple-touch-icon.png',
@@ -31,6 +32,11 @@ self.addEventListener('install', (event) => {
 
 // Fetch event - serve from cache when offline
 self.addEventListener('fetch', (event) => {
+  // Only handle HTTP/HTTPS requests, skip chrome-extension and other schemes
+  if (!event.request.url.startsWith('http')) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
@@ -51,7 +57,10 @@ self.addEventListener('fetch', (event) => {
 
             caches.open(CACHE_NAME)
               .then((cache) => {
-                cache.put(event.request, responseToCache);
+                // Additional safety check before caching
+                if (event.request.url.startsWith('http')) {
+                  cache.put(event.request, responseToCache);
+                }
               });
 
             return response;
