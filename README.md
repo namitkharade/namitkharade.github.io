@@ -196,7 +196,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Namit Bhalendra Kharade**
 - Email: namit.b.kharade@gmail.com
-- Phone: +49 176 37249426
 - LinkedIn: [linkedin.com/in/namit-k](https://www.linkedin.com/in/namit-k/)
 - GitHub: [github.com/namitkharade](https://github.com/namitkharade)
 - Portfolio: [namitkharade.github.io](https://namitkharade.github.io/)
