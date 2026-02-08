@@ -61,8 +61,6 @@
               <li>Document findings and performance metrics, providing comprehensive documentation to enhance knowledge sharing and streamline future research and development.</li>
             </ul>
           </div>
-        </div>
-      </div>
 
       <!-- ai-coustics GmbH -->
       <div class="mb-10 ml-14">
