@@ -3,14 +3,14 @@ import { createApp } from 'vue'
 
 // Analytics configuration
 export const analyticsConfig = {
-  measurementId: 'G-TBSZ11P2PF',
+  measurementId: import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-TBSZ11P2PF',
   enabled: true, // Enable in both dev and prod for testing
 }
 
 // Enhanced analytics events for portfolio tracking
 export const trackEvent = (eventName, parameters = {}) => {
-  if (typeof gtag !== 'undefined' && analyticsConfig.enabled) {
-    gtag('event', eventName, {
+  if (typeof window !== 'undefined' && typeof window.gtag !== 'undefined' && analyticsConfig.enabled) {
+    window.gtag('event', eventName, {
       ...parameters,
       timestamp: new Date().toISOString(),
     })

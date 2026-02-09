@@ -1,9 +1,15 @@
 <template>
   <div :class="isDarkMode ? 'dark' : ''">
     <div
-      class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex flex-col dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 duration-500 transition-all ease-in-out">
+      class="app-shell min-h-screen flex flex-col duration-500 transition-all ease-in-out">
       <div class="fixed top-4 right-4 z-50">
-        <button @click="toggleDarkMode" class="p-2 rounded-full bg-white/80 dark:bg-gray-800/80 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110">
+        <button 
+          @click="toggleDarkMode" 
+          class="glass-button p-2 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110"
+          :aria-label="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+          :aria-pressed="isDarkMode.toString()"
+          role="switch"
+        >
           <font-awesome-icon :icon="isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon'" class="text-xl text-amber-500 dark:text-blue-400" />
         </button>
       </div>
@@ -21,7 +27,6 @@
 </template>
 
 <script setup>
-import ModeToggler from './components/ModeToggler.vue';
 import CardHeader from './components/CardHeader.vue';
 import CardFooter from './components/CardFooter.vue';
 
@@ -60,6 +65,3 @@ const toggleDarkMode = () => {
   opacity: 0;
 }
 </style>
-
-
-

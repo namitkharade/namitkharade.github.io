@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { 
   faEnvelope, faMoon, faSun, faUserSecret, 
   faDownload, faCode, faGraduationCap, 
-  faBook, faBriefcase, faFile, faFileText,
+  faBook, faBriefcase, faFile, faFileAlt,
   faLocationDot, faExternalLinkAlt, faPhone,
   faPaperPlane, faSpinner, faCheckCircle,
   faExclamationCircle, faEye, faEyeSlash,
@@ -29,7 +29,7 @@ library.add(
   faUserSecret, faFacebook, faLinkedin, faInstagram, 
   faGithub, faTwitter, faMoon, faSun, faEnvelope,
   faDownload, faCode, faGraduationCap, faBook, 
-  faBriefcase, faFile, faFileText, faLocationDot, faExternalLinkAlt,
+  faBriefcase, faFile, faFileAlt, faLocationDot, faExternalLinkAlt,
   faPhone, faPaperPlane, faSpinner, faCheckCircle,
   faExclamationCircle, faEye, faEyeSlash, faArrowRight,
   faBrain, faDatabase, faRobot, faGlobe, faServer,

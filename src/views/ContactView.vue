@@ -1,18 +1,21 @@
 <template>
-  <div class="mt-24 max-w-4xl mx-auto px-4">
-    <div class="text-center mb-12">
+  <div class="mt-24 max-w-4xl mx-auto px-4 relative">
+    <div class="aurora-bg"></div>
+    <div class="hero-spotlight"></div>
+    <div class="text-center mb-12 relative z-10">
       <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
         Let's Connect!
       </h1>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full section-divider mb-6"></div>
       <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-        I'm always excited to discuss new opportunities, collaborate on interesting projects, or just have a chat about technology, data science, or life in Germany! 🇩🇪
+        Open to AI engineering roles, research collaborations, and production-ready LLM projects. Let’s build something impactful.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 relative z-10">
       <!-- Contact Information -->
       <div class="space-y-8">
-        <div>
+        <div class="glass-panel p-6 rounded-2xl">
           <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Get in Touch</h2>
           <div class="space-y-4">
             <div class="flex items-center space-x-4">
@@ -28,6 +31,18 @@
             </div>
 
             <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white">
+                <font-awesome-icon icon="fa-solid fa-phone" />
+              </div>
+              <div>
+                <p class="font-medium text-gray-800 dark:text-white">Phone</p>
+                <a href="tel:+4917637249426" class="text-emerald-600 dark:text-emerald-400 hover:underline">
+                  +49 176 37249426
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
               <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white">
                 <font-awesome-icon icon="fa-solid fa-location-dot" />
               </div>
@@ -36,11 +51,23 @@
                 <p class="text-gray-600 dark:text-gray-300">Berlin, Germany</p>
               </div>
             </div>
+
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-cyan-600 rounded-full flex items-center justify-center text-white">
+                <font-awesome-icon icon="fa-solid fa-globe" />
+              </div>
+              <div>
+                <p class="font-medium text-gray-800 dark:text-white">Portfolio</p>
+                <a href="https://namitkharade.github.io" target="_blank" class="text-cyan-600 dark:text-cyan-400 hover:underline">
+                  namitkharade.github.io
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- Social Links -->
-        <div>
+        <div class="glass-panel p-6 rounded-2xl">
           <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Connect on Social Media</h3>
           <div class="flex space-x-4">
             <a href="https://www.linkedin.com/in/namit-k/" target="_blank" 
@@ -59,19 +86,19 @@
         </div>
 
         <!-- Quick Info -->
-        <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+        <div class="glass-panel p-6 rounded-2xl">
           <h3 class="text-lg font-bold mb-3 text-gray-800 dark:text-white">Quick Info</h3>
           <div class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
             <p><span class="font-medium">Current Role:</span> AI Engineer at AIME GmbH</p>
-            <p><span class="font-medium">Education:</span> M.Sc. Data Science at Otto-von-Guericke University</p>
-            <p><span class="font-medium">Languages:</span> English (Fluent), German (A2)</p>
-            <p><span class="font-medium">Interests:</span> AI/ML, Data Science, Cars, Cats, Travel, Swimming 🏊‍♂️</p>
+            <p><span class="font-medium">Focus:</span> GraphRAG, LLM Inference, Evaluation Pipelines</p>
+            <p><span class="font-medium">Education:</span> M.Sc. Data & Knowledge Engineering (Otto-von-Guericke University)</p>
+            <p><span class="font-medium">Languages:</span> English (C1), German (A2)</p>
           </div>
         </div>
       </div>
 
       <!-- Contact Form -->
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+      <div class="glass-panel p-8 rounded-2xl shadow-lg">
         <h2 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Send me a Message</h2>
         
         <!-- Success/Error Messages -->
@@ -148,7 +175,7 @@
           <button 
             type="submit" 
             :disabled="isLoading"
-            class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-300 flex items-center justify-center"
+            class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-300 flex items-center justify-center btn-premium"
           >
             <font-awesome-icon v-if="isLoading" icon="fa-solid fa-spinner" class="animate-spin mr-2" />
             <font-awesome-icon v-else icon="fa-solid fa-paper-plane" class="mr-2" />
@@ -185,6 +212,12 @@ export default {
     };
   },
   methods: {
+    validateEmail(email) {
+      // RFC 5322 compliant email validation
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      return emailRegex.test(email);
+    },
+    
     async sendEmail() {
       this.isLoading = true;
       this.showSuccess = false;
@@ -192,6 +225,20 @@ export default {
       this.errorMessage = '';
 
       try {
+        // Validate email format
+        if (!this.validateEmail(this.form.email)) {
+          throw new Error('Please enter a valid email address.');
+        }
+        
+        // Validate required fields
+        if (!this.form.name || !this.form.name.trim()) {
+          throw new Error('Please enter your name.');
+        }
+        
+        if (!this.form.message || !this.form.message.trim()) {
+          throw new Error('Please enter a message.');
+        }
+        
         // Check if EmailJS is configured
         if (emailConfig.serviceID === 'YOUR_SERVICE_ID' || 
             emailConfig.templateID === 'YOUR_TEMPLATE_ID' || 

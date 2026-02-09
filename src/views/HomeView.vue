@@ -1,47 +1,50 @@
 <template>
-  <div class="mt-20 sm:mt-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+  <div id="home" class="mt-20 sm:mt-16 relative">
+    <div class="aurora-bg"></div>
+    <div class="hero-spotlight"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto relative z-10">
       <div class="order-2 md:order-1 text-left px-4">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           Namit Bhalendra Kharade
         </h1>
         <h2 class="text-xl sm:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-4">
-          AI Engineer @ AIME GmbH, Berlin
+          AI & Software Engineer (M.Sc.) @ AIME GmbH
         </h2>
         <div class="flex items-center mb-6 text-gray-600 dark:text-gray-300">
           <font-awesome-icon icon="fa-solid fa-location-dot" class="mr-2" />
           <span>Berlin, Germany</span>
         </div>
         <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-          Data Science professional with expertise in AI, ML, and Data Engineering. Currently pursuing a Master's degree in Data and Knowledge Engineering while working as an AI Engineer at AIME GmbH.
+          3+ years of experience building scalable backend infrastructure for Generative AI. Specialized in GraphRAG systems, LLM inference optimization, and automated evaluation pipelines.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a 
-            href="mailto:namit.b.kharade@gmail.com" 
+          <RouterLink
+            to="/contact" 
             @click="trackContactClick('email')"
-            class="group relative flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden"
+            class="group relative flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg overflow-hidden btn-premium"
           >
             <div class="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <font-awesome-icon icon="fa-solid fa-envelope" class="mr-3 text-lg relative z-10" />
             <span class="font-semibold relative z-10">Contact Me</span>
-          </a>
-          <a 
-            href="/resume" 
+          </RouterLink>
+          <RouterLink
+            to="/resume" 
             @click="trackResumeView"
             class="group relative flex items-center px-8 py-4 border-2 border-transparent bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 text-blue-700 dark:text-blue-300 rounded-xl hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg backdrop-blur-sm"
           >
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 dark:from-blue-400/10 dark:to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
             <font-awesome-icon icon="fa-solid fa-file-text" class="mr-3 text-lg relative z-10" />
             <span class="font-semibold relative z-10">View Resume</span>
-          </a>
+          </RouterLink>
         </div>
       </div>
       <div class="order-1 md:order-2 flex justify-center">
         <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/40 via-purple-500/30 to-cyan-400/30 blur-2xl"></div>
           <img
             :src="isHovered ? animatedImage : staticImage"
             alt="Profile"
-            class="w-full h-full rounded-full object-cover shadow-xl border-4 border-white dark:border-gray-800 transition-all duration-300 transform hover:scale-105"
+            class="w-full h-full rounded-full object-cover shadow-xl border-4 border-white/80 dark:border-gray-800/80 transition-all duration-300 transform hover:scale-105 relative z-10"
             @mouseover="handleMouseOver"
             @mouseout="handleMouseOut"
           />
@@ -52,126 +55,89 @@
       </div>
     </div>
 
-    <div class="max-w-6xl mx-auto mt-20 px-4">
+    <!-- What I Do -->
+    <div id="about" class="max-w-6xl mx-auto mt-20 px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-          Skills & Expertise
+          What I Do
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full section-divider"></div>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-        <div 
-          @mouseenter="trackSkillHover('AI/ML')"
-          class="group bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-blue-100 dark:border-gray-700"
-        >
-          <div class="text-3xl mb-3 transform group-hover:scale-110 transition-transform duration-300">🧠</div>
-          <div class="font-semibold text-gray-800 dark:text-white">AI/ML</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Expert</div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="group bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 border border-blue-100 dark:border-gray-700">
+          <div class="text-5xl mb-4">🤖</div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">AI & LLM Systems</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Building production-ready LLM applications with GraphRAG, evaluation pipelines, and scalable inference</p>
         </div>
-        <div 
-          @mouseenter="trackSkillHover('Python')"
-          class="group bg-gradient-to-br from-white to-green-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-green-100 dark:border-gray-700"
-        >
-          <div class="text-3xl mb-3 transform group-hover:scale-110 transition-transform duration-300">🐍</div>
-          <div class="font-semibold text-gray-800 dark:text-white">Python</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Expert</div>
+        <div class="group bg-gradient-to-br from-white to-purple-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 border border-purple-100 dark:border-gray-700">
+          <div class="text-5xl mb-4">🧱</div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Data Engineering</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Designing ETL pipelines, automating data workflows, and building robust data infrastructure</p>
         </div>
-        <div 
-          @mouseenter="trackSkillHover('Data Engineering')"
-          class="group bg-gradient-to-br from-white to-purple-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-purple-100 dark:border-gray-700"
-        >
-          <div class="text-3xl mb-3 transform group-hover:scale-110 transition-transform duration-300">📊</div>
-          <div class="font-semibold text-gray-800 dark:text-white">Data Engineering</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Advanced</div>
-        </div>
-        <div 
-          @mouseenter="trackSkillHover('GCP')"
-          class="group bg-gradient-to-br from-white to-yellow-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-yellow-100 dark:border-gray-700"
-        >
-          <div class="text-3xl mb-3 transform group-hover:scale-110 transition-transform duration-300">☁️</div>
-          <div class="font-semibold text-gray-800 dark:text-white">GCP</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Advanced</div>
-        </div>
-        <div 
-          @mouseenter="trackSkillHover('Web Development')"
-          class="group bg-gradient-to-br from-white to-teal-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-teal-100 dark:border-gray-700"
-        >
-          <div class="text-3xl mb-3 transform group-hover:scale-110 transition-transform duration-300">⚛️</div>
-          <div class="font-semibold text-gray-800 dark:text-white">Web Development</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Intermediate</div>
-        </div>
-        <div 
-          @mouseenter="trackSkillHover('Data Analysis')"
-          class="group bg-gradient-to-br from-white to-orange-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 border border-orange-100 dark:border-gray-700"
-        >
-          <div class="text-3xl mb-3 transform group-hover:scale-110 transition-transform duration-300">🔍</div>
-          <div class="font-semibold text-gray-800 dark:text-white">Data Analysis</div>
-          <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">Expert</div>
+        <div class="group bg-gradient-to-br from-white to-green-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl text-center transform transition-all duration-300 hover:scale-105 border border-green-100 dark:border-gray-700">
+          <div class="text-5xl mb-4">☁️</div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">MLOps & Cloud</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Deploying ML models at scale on cloud platforms with containerization and orchestration</p>
         </div>
       </div>
     </div>
 
-    <div class="max-w-6xl mx-auto mt-24 px-4">
+    <!-- Quick Stats -->
+    <div id="skills" class="max-w-6xl mx-auto mt-16 px-4">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="text-center">
+          <div class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">3+</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Years</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">15+</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Projects</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">50%</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Time Saved</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">2</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Publications</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Current Work -->
+    <div id="experience" class="max-w-6xl mx-auto mt-24 px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-          Recent Experience
+          Currently At
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full section-divider"></div>
       </div>
-      <div class="space-y-8">
-        <div class="group relative bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-gray-800 dark:via-gray-850 dark:to-gray-900 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-blue-100 dark:border-gray-700 overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-400/20 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-          <div class="relative z-10">
-            <div class="flex flex-wrap justify-between items-start mb-6">
-              <div class="flex items-center space-x-4">
-                <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
-                  <font-awesome-icon icon="fa-solid fa-brain" class="text-xl" />
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">AI Engineer (part-time)</h3>
-                  <h4 class="text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">AIME GmbH</h4>
-                </div>
+      <div class="max-w-4xl mx-auto">
+        <div class="group relative bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-blue-100 dark:border-gray-700">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6">
+            <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                <font-awesome-icon icon="fa-solid fa-brain" class="text-2xl" />
               </div>
-              <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-blue-200 dark:border-gray-600">
-                November 2024 - Present
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">AI Engineer</h3>
+                <a href="https://aime.info" target="_blank" class="text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+                  AIME GmbH →
+                </a>
               </div>
             </div>
-            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              Currently benchmarking AI models and implementing demonstrations for real-time applications on cutting-edge infrastructure.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">AI Benchmarking</span>
-              <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Real-time AI</span>
-              <span class="px-4 py-2 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Documentation</span>
+            <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-blue-200 dark:border-gray-600">
+              Oct 2024 - Present
             </div>
           </div>
-        </div>
-        
-        <div class="group relative bg-gradient-to-br from-white via-green-50 to-blue-50 dark:from-gray-800 dark:via-gray-850 dark:to-gray-900 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-green-100 dark:border-gray-700 overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-green-400/20 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-          <div class="relative z-10">
-            <div class="flex flex-wrap justify-between items-start mb-6">
-              <div class="flex items-center space-x-4">
-                <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
-                  <font-awesome-icon icon="fa-solid fa-database" class="text-xl" />
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">Data Engineer</h3>
-                  <h4 class="text-xl font-semibold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">ai-coustics GmbH</h4>
-                </div>
-              </div>
-              <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-green-200 dark:border-gray-600">
-                February 2024 - August 2024
-              </div>
-            </div>
-            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              Developed robust data pipelines using Apache Airflow and implemented automatic labeling plugins, achieving 50% performance improvement.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <span class="px-4 py-2 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Apache Airflow</span>
-              <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">GCP</span>
-              <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Audio Processing</span>
-            </div>
+          <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+            Building production-ready AI systems with GraphRAG, LLM evaluation pipelines, and scalable inference on GPU Cloud.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">GraphRAG</span>
+            <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">LLM Inference</span>
+            <span class="px-4 py-2 bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">MLOps</span>
+            <span class="px-4 py-2 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-medium">Python</span>
           </div>
         </div>
       </div>
@@ -179,12 +145,39 @@
         <RouterLink 
           to="/resume" 
           @click="trackResumeView"
-          class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-2xl hover:from-gray-800 hover:to-gray-600 dark:hover:from-gray-100 dark:hover:to-gray-300 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+          class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-200 text-white dark:text-gray-900 rounded-2xl hover:from-gray-800 hover:to-gray-600 dark:hover:from-gray-100 dark:hover:to-gray-300 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl btn-premium"
         >
-          <font-awesome-icon icon="fa-solid fa-file-alt" class="mr-3 text-lg group-hover:rotate-12 transition-transform duration-300" />
-          <span class="font-semibold text-lg">View Full Resume</span>
-          <div class="ml-3 w-2 h-2 bg-current rounded-full animate-pulse"></div>
+          <font-awesome-icon icon="fa-solid fa-file-alt" class="mr-3 text-lg" />
+          <span class="font-semibold text-lg">View Full Experience & Resume</span>
         </RouterLink>
+      </div>
+    </div>
+
+    <!-- Contact CTA Section -->
+    <div id="contact" class="max-w-4xl mx-auto mt-24 px-4 mb-16">
+      <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white shadow-2xl">
+        <h2 class="text-3xl font-bold mb-4">Let's Build Something Amazing</h2>
+        <p class="text-lg mb-8 text-blue-100">
+          Interested in collaborating? I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <RouterLink
+            to="/contact" 
+            @click="trackContactClick('email')"
+            class="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
+          >
+            <font-awesome-icon icon="fa-solid fa-envelope" class="mr-3 text-lg" />
+            Get In Touch
+          </RouterLink>
+          <a 
+            href="https://www.linkedin.com/in/namit-k/" 
+            target="_blank"
+            class="inline-flex items-center px-8 py-4 bg-blue-700 text-white rounded-xl hover:bg-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg font-semibold"
+          >
+            <font-awesome-icon icon="fa-brands fa-linkedin" class="mr-3 text-lg" />
+            Connect on LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   </div>

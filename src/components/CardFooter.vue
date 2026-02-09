@@ -1,5 +1,5 @@
 <template>
-    <footer class="py-8 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+    <footer class="py-10 glass-panel backdrop-blur-sm">
         <div class="container mx-auto px-4">
             <div class="flex flex-col items-center">
                 <div class="flex items-center space-x-6 mb-6">
